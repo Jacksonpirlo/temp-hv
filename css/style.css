@@ -15,6 +15,14 @@
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+    transition: all 1s ease;
+}
+
+.navbar li {
+    transition: all .5s ease;
+    cursor: pointer;
+     padding: 7px;
+     border-radius: 10px;
 }
 
 main {
@@ -55,12 +63,22 @@ main {
 
 /* About me section */
 
+
+.About_me {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
 .About_me h2 {
     margin-bottom: 20px;
 }
 
 .About_me p {
     margin-bottom: 10px;
+    max-width: 400px;
+    padding: 12px;
 }
 
 .personal_information {
@@ -98,6 +116,7 @@ main {
 
 .experience p {
     margin: 10px;
+    margin-bottom: 20px;
 }
 
 .experience .imgs {
@@ -146,4 +165,38 @@ footer a {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+}
+
+@media (min-width: 500px) {
+    .experience {
+        width: 100%;
+    }
+
+    .experience p {
+        width: 60%;
+    }
+
+    .experience .imgs {
+        margin: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 810px) {
+
+    .navbar li:hover {
+        background-color: #fff;
+        color: #000;
+        transition: all .5s ease;
+    }
+
+    * {
+        font-size: 105.0%;
+    }
+
+    .experience .imgs {
+        margin: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        gap:40px;
+    }
 }
