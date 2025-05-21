@@ -25,6 +25,12 @@
      border-radius: 10px;
 }
 
+.navbar li:hover {
+    background-color: #fff;
+    color: #000;
+    transition: all 1s ease;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -45,6 +51,11 @@ main {
     border-radius: 20px;
 }
 
+.background-main h1 {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
 .main-styles h1 {
     margin-bottom: 10px;
 }
@@ -59,6 +70,12 @@ main {
     min-width: 100;
     border-radius: 20px 10px 60px 33px;
     box-shadow: 1px 10px 20px 1px #6f00ff;
+    transition: all 1s ease;
+}
+
+.img-container img:hover {
+    box-shadow: 1px 10px 20px 1px #d400ff;
+    transition: all 1s ease;
 }
 
 /* About me section */
@@ -144,10 +161,38 @@ main {
     margin-bottom: 20px;
 }
 
-.projects_items a {
-    color: #d8d6d6;
+.img-with {
+    max-width: 500px;
 }
 
+table {
+   text-align: center;
+   border: 5px solid #000;
+   margin: 2em;
+   background-color: #00028f5d;
+   list-style: none;
+   font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+table tr td {
+    padding: 20px;
+}
+
+table {
+    color: #fff;
+}
+
+table th {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.945)
+}
+
+table a {
+    color: #26e200;
+}
 footer {
     display: flex;
     justify-content: center;
