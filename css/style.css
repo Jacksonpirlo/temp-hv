@@ -71,9 +71,7 @@ main {
     padding: 10px;
     color: #fff;
     margin-bottom: 25px;
-    border-radius: 20px;
-    min-width: 800px !important;
-    width: 500px;
+    width: 100vw;
 }
 
 .background-main h1 {
@@ -304,10 +302,13 @@ form button {
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 20px;
     background-color: #6f00ff;
     box-shadow: 10px 10px 100px 80px #6f00ff;
+    z-index: 4;
 }
 
 footer a {
@@ -320,6 +321,23 @@ footer a {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+}
+
+footer .icons a i {
+    font-size: 30px;
+    color: #fff;
+}
+
+footer .icons a {
+    font-size: 30px;
+    color: #fff;
+    list-style: none;
+    z-index: 4;
+}
+
+footer .icons{
+    display: flex;
+    justify-content: space-between;
 }
 
 form label {
