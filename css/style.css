@@ -4,10 +4,23 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    font-size: 90%;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+}
+
 .navbar {
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
+    flex-wrap: wrap;
+    text-align: center;
     list-style: none;
     background-color: #6f00ff;
     color: #fff;
@@ -23,18 +36,28 @@
     cursor: pointer;
      padding: 7px;
      border-radius: 10px;
+     list-style: none !important;
+    }
+
+.navbar li a {
+    text-decoration: none;
+    padding: 7px;
+    color: #fff;
+    border-radius: 10px;
 }
 
-.navbar li:hover {
+.navbar li > a:hover {
     background-color: #fff;
-    color: #000;
+    color: #000000 !important;
     transition: all 1s ease;
 }
 
 main {
     display: flex;
+    flex-wrap: wrap !;
     justify-content: center;
     text-align: center;
+    align-items: center;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -59,14 +82,16 @@ main {
 }
 
 .main-styles {
+    position:relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    top: 100px;
 }
 
 .main-styles h1 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .img-container {
@@ -75,7 +100,7 @@ main {
 
 .img-container img {
     max-width: 500px;
-    width: 250px;
+    width: 200px;
     min-width: 100;
     border-radius: 20px 10px 60px 33px;
     box-shadow: 1px 10px 20px 1px #6f00ff;
@@ -92,13 +117,19 @@ main {
 
 .About_me {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    flex-wrap: wrap !important;
+    width: 100vw !important;
+    padding: 8px;
     text-align: center;
     align-items: center;
 }
 
 .About_me h2 {
     margin-bottom: 20px;
+    border-bottom: 2px solid #6f00ff;
 }
 
 .About_me p {
@@ -130,17 +161,19 @@ main {
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     width: 50vw !important;
+     width: 100vw !important;
+     flex-wrap: wrap;
      border-radius: 20px 30px 1px 0px;
      padding: 8px;
-     animation-name: leds;
+     background-color: #313131;
+     /* animation-name: leds;
      animation-duration: 9s;
      animation-timing-function: linear;
      animation-iteration-count: infinite;
-     animation-delay: 2s;
+     animation-delay: 2s; */
     }
     
-@keyframes leds {
+/* @keyframes leds {
      0% {
         background-color: #4d4d4d;
         border-radius: 60px 30px 80px 0px;
@@ -161,12 +194,13 @@ main {
         background-color: #33333356;
         border-radius: 20px 30px 45px 1px;
      }
-}
+} */
 
 .experience h1 {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 28px;
+    border-bottom: 2px solid #6f00ff;
 }
 
 .experience p {
@@ -200,7 +234,7 @@ main {
 
 .projects h1 {
     margin: 50px;
-    font-size: 30px;
+    font-size: 25px;
     border-bottom: 2px solid #6f00ff;
     color: #fff;
     width: 320px;
@@ -208,7 +242,7 @@ main {
 
 .img-with {
     max-width: 800px;
-    width: 500PX;
+    width: 80VW;
     min-width: 320px;
 }
 
@@ -222,11 +256,11 @@ table {
    font-optical-sizing: auto;
    font-weight: weight;
    font-style: normal;
+   font-size: 12px;
    color: #fff;
-   max-width: 900px;
-   min-width: 310px;
-   width: 50vw;
-   font-size: 17px;
+   max-width: 800px;
+    width: 80VW;
+    min-width: 300px;
 }
 
 table tr td {
@@ -241,6 +275,33 @@ table th {
 table a {
     color: #26e200;
 }
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 450px;
+    margin-bottom: 120px;
+}
+
+.form-container h3 {
+    border-bottom: 2px solid #6f00ff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    max-width: 600px;
+}
+
+form button {
+    width: 100px;
+    padding: 5px;
+    margin: 20px;
+}
+
 footer {
     display: flex;
     justify-content: center;
@@ -261,7 +322,16 @@ footer a {
     font-style: normal;
 }
 
-@media (max-width: 700px) {
+form label {
+    margin: 10px;
+}
+
+@media (min-width: 700px) {
+
+    html {
+        font-size: 105.0%;
+    }
+    
     .experience {
         width: 100%;
     }
@@ -272,11 +342,24 @@ footer a {
 
     .experience .imgs {
         margin: 20px;
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(4, 1fr) !important;
     }
+    
+    table {
+        font-size: 20px;
+    }
+
+    .projects h1 {
+        font-size: 25px;
+    }
+
 }
 
-@media (max-width: 810px) {
+@media (min-width: 810px) {
+
+    html {
+        font-size: 105.0%;
+    }
 
     .navbar li:hover {
         background-color: #fff;
@@ -284,18 +367,23 @@ footer a {
         transition: all .5s ease;
     }
 
-    * {
-        font-size: 105.0%;
-    }
-
     .experience .imgs {
         margin: 20px;
         grid-template-columns: repeat(4, 1fr);
         gap:40px;
     }
+
+    table {
+        font-size: 20px;
+    }
+
+    .projects h1 {
+        font-size: 25px;
+    }
+
 }
 
-@media (max-width: 1500px) {
+@media (min-width: 1500px) {
 
     .experience {
         width: 100vw !important;
@@ -311,5 +399,13 @@ footer a {
         width: 100px;
         height: 100px;
         margin: 15px;
+    }
+
+    .img-container img {
+        width: 250px;
+    }
+
+    .projects h1 {
+        font-size: 30px;
     }
 }
