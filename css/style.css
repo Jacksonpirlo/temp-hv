@@ -1,20 +1,21 @@
+/* Reset all default margins and padding for all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Basic HTML settings - smooth scroll and smaller font size */
 html {
     scroll-behavior: smooth;
     font-size: 90%;
 }
-
+/* Header stays fixed at the top of the page */
 header {
     position: fixed;
     width: 100vw;
     z-index: 2;
 }
-
+/* Navigation bar - purple background with white text */
 .navbar {
     display: flex;
     justify-content: space-evenly;
@@ -112,6 +113,7 @@ main {
 
 /* About me section */
 
+/* About me section - centered layout - FIXED for mobile */
 .About_me {
     display: flex;
     justify-content: center;
@@ -153,7 +155,7 @@ main {
 }
 
 /* Experience section */
-
+/* Experience section - gray background, centered layout - FIXED for mobile */
 .experience {
     display: flex;
     flex-direction: column;
@@ -343,6 +345,7 @@ footer .icons{
 form label {
     margin: 10px;
 }
+/* Responsive design for tablets (700px and up) */
 
 @media (min-width: 700px) {
 
